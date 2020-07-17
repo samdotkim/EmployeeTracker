@@ -1,7 +1,6 @@
 // External packages
 const mysql = require('mysql');
 const inquirer = require('inquirer');
-
 // Internal modules
 // View only queries
 const view = require('./utils/view.js');

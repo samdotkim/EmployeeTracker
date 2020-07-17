@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+github.com:connietran-dev/mysql-employee-tracker.git"
+    "url": "git+https://github.com/samdotkim/EmployeeTracker.git"
   },
   "keywords": [
     "mysql",
@@ -17,7 +17,7 @@
     "node",
     "inquirer"
   ],
-  "author": "Connie Tran",
+  "author": "samdotkim",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.1.0",
