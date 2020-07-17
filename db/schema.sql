@@ -1,16 +1,16 @@
-DROP DATABASE IF EXISTS company_DB;
-CREATE DATABASE company_DB;
-USE company_DB;
+DROP DATABASE IF EXISTS dbCompany;
+CREATE DATABASE dbCompany;
+USE dbCompany;
 
 CREATE TABLE department (
   id INTEGER NOT NULL AUTO_INCREMENT,
-  name VARCHAR(50) NOT NULL,
+  name VARCHAR(30) NOT NULL,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE role (
   id INTEGER NOT NULL AUTO_INCREMENT,
-  title VARCHAR(50) NOT NULL,
+  title VARCHAR(30) NOT NULL,
   salary DECIMAL(15,2) NOT NULL,
   department_id INTEGER,
   PRIMARY KEY (id),
@@ -19,8 +19,8 @@ CREATE TABLE role (
 
 CREATE TABLE employee (
   id INTEGER NOT NULL AUTO_INCREMENT,
-  first_name VARCHAR(50) NOT NULL,
-  last_name VARCHAR(50) NOT NULL,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
   role_id INTEGER NOT NULL,
   manager_id INTEGER,
   PRIMARY KEY (id),

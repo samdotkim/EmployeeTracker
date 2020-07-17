@@ -8,13 +8,12 @@ const view = require('./utils/view.js');
 const add = require('./utils/add.js');
 // Updating and deleting existing data
 const update = require('./utils/update.js');
-
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
     password: "password",
-    database: "company_DB"
+    database: "dbCompany"
 });
 
 connection.connect(function (err) {
@@ -105,4 +104,3 @@ function start() {
             }
         })
 }
-

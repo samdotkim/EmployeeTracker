@@ -1,43 +1,35 @@
 # MySQL Employee Tracker
 
-This command-line interface is a Node MySQL application that allows users to view and interact with information stored in a database that houses employee, company, and department data. 
+A CLI (command line interface) using Node.js and MySQL databases that can view and manage information about employees.
+
+The database organizes the stored MySQL data by employee, department, and other company info.
+
 
 ## Functionality
 
-This Node command-line application allows the user to:
-
-  * View departments, roles, employees
-
-  * View employees by department or by manager
-
-  * Add departments, roles, employees
-
-  * Delete departments, roles, and employees
-
-  * Update employee roles
-
-  * Update employee managers
+1. View departments, roles, employees
+2. View employees by department or by manager
+3. Add departments, roles, employees
+4. Delete departments, roles, and employees
+5. Update employee roles
+6. Update employee managers
 
 
-
-![Demo of Employee Tracker application](assets/employee-tracker.gif)
+![Demo of Employee Tracker application]
 
 
 ## Installation
 
-To run this application, first download the repository and run `npm install` in order to install the following npm package dependencies as specified in the [`package.json`](https://github.com/samdotkim-dev/mysql-employee-tracker/blob/master/package.json):
+1. run `npm i` to install npm package dependencies
+  a. MySQL npm package - connects and queries MySQL database
+  b. Inquirer npm package - User Input Prompts in CLI
+2. Optional: run the files in the `db/` folder.
+  a. schema.sql - initiates the MySQL Database Schema
+  b. seeds.sql - populates DB schema with sample data
+3. utils folder separates all the SQL queries functionality
 
-* [MySQL](https://www.npmjs.com/package/mysql) NPM package to connect to the MySQL database and perform queries.
-
-* [InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package to interact with the user via the command-line.
-
-You may wish to run `db/schema.sql` and `/db/seeds.sql` files to create the database locally. 
-
-The [`utils/`](https://github.com/samdotkim-dev/mysql-employee-tracker/tree/master/utils) folder contains separate files for functions for performing specific SQL queries, including a variety of SQL `JOIN`s.
 
 ## Database Schema
-
-The `schema.sql` file in the `db/` folder creates the following database schema containing three tables:
 
 ![Database Schema](assets/schema.png)
 
@@ -60,13 +52,3 @@ The `schema.sql` file in the `db/` folder creates the following database schema 
   * **last_name** - VARCHAR(30) to hold employee last name
   * **role_id** - INT to hold reference to role employee has
   * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
-
-The `seeds.sql` file can be run to pre-populate your database from our favorite characters from The Office.
-
-### Future Enhancements
-
-If time permits, there are some future enhancements, minor tweaks, and improvements I'd like to make:
-
-* Refactor database queries with async/await and Promises
-* Utilize an NPM package for console.table
-* Enhance logic and functionality to further update employee data

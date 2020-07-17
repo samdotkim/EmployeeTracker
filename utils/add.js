@@ -9,7 +9,7 @@ function addEmployee(connection, cb) {
                 {
                     name: "first_name",
                     type: "input",
-                    default: "Ann",
+                    default: "Sam",
                     message: "What is the employee's first name?",
                     validate: function (answer) {
                         if (answer.length < 1) {
@@ -21,7 +21,7 @@ function addEmployee(connection, cb) {
                 {
                     name: "last_name",
                     type: "input",
-                    default: "Pleasant",
+                    default: "Kim",
                     message: "What is the employee's last name?",
                     validate: function (answer) {
                         if (answer.length < 1) {
@@ -54,7 +54,7 @@ function addEmployee(connection, cb) {
 
                     newEmployee.role_id = results[0].id;
 
-                    // Ask for manager
+                    // Ask for the manager (aka the Karen Function)
                     connection.query("SELECT * FROM employee;", function (err, results) {
                         if (err) throw err;
                         inquirer
@@ -100,7 +100,7 @@ function addRole(connection, cb) {
                 {
                     name: "role_title",
                     type: "input",
-                    default: "Lead Engineer",
+                    default: "Engineer",
                     message: "What is the role you would like to add?",
                     validate: function (answer) {
                         if (answer.length < 1) {
@@ -112,7 +112,7 @@ function addRole(connection, cb) {
                 {
                     name: "salary",
                     type: "input",
-                    default: "210000",
+                    default: "80000",
                     message: "What is the salary of the role?",
                     validate: function (answer) {
                         if (answer.length < 1) {
