@@ -1,49 +1,54 @@
--- departments
+-- DEPARTMENTS
 INSERT INTO department (name)
 VALUES 
-("Management"), 
-("Sales"), 
-("IT"), 
+("Executive"), 
+("Finance"), 
 ("HR"), 
-("Marketing"), 
-("Interns");
+("IT"), 
+("Operations"), 
+("Sales");
 
 SELECT * FROM department;
 
--- roles
+
+-- ROLES
 INSERT INTO role (title, salary, department_id)
 VALUES 
-("Senior Manager", 120000.00, 1),
-("Junior Manager", 80000.00, 1),
-("Sales Rep", 60000.00, 2),
-("Engineer", 70000.00, 3),
-("HR Rep", 40000.00, 4),
-("Marketing Coordinator", 50000.00, 5),
-("Overpaid Intern", 1000000.00, 6),
+("Assistant Manager", 90000.00, 1),
+("Regional Manager", 180000.00, 1),
+("Accountant", 70000.00, 2),
+("HR Associate", 90000.00, 3),
+("Software Engineer", 175000.00, 4),
+("Admin Professional", 40000.00, 5),
+("Manager", 80000.00, 6),
+("QC Associate", 45000.00, 6),
+("Sales Representative", 60000.00, 6);
 
 SELECT * FROM role;
 
 
--- managers
+-- EMPLOYEES
+
+-- Create managers who do not have a manager so that employees with managers have correct manager_id
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES 
-("Justin", "Beiber", 2),
-("Bill", "Gates", 3),
-("Karen", "Johnson", 5),
-("Will", "Ferrell", 4);
+("Michael", "Scott", 2),
+("Angela", "Martin", 3),
+("Darryl", "Philbin", 5),
+("Connie", "Tran", 4);
 
--- generate employees
+-- Create employees
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES 
-("Lucy", "Lu", 1, 1),
-("Mike", "Tyson", 6, 1),
-("Arnold", "Schwarzenagger", 6, 1),
-("Elon", "Musk", 6, 1),
-("Kanye", "East", 2, 1),
-("Jeff", "Bezos", 3, 2),
-("Bob", "Sagat", 3, 2),
-("Bill", "Clinton", 6, 3),
-("Terry", "Crews", 5, 1),
-("Robert", "Frost", 4, 1);
+("Dwight", "Schrute", 1, 1),
+("Jim", "Halpert", 9, 1),
+("Pam", "Beasley", 6, 1),
+("Stanley", "Hudson", 9, 1),
+("Phyllis", "Lapin", 9, 1),
+("Oscar", "Gutierrez", 3, 2),
+("Kevin", "Malone", 3, 2),
+("Creed", "Bratton", 6, 3),
+("Andy", "Bernard", 7, 1),
+("Toby", "Flenderson", 4, 1);
 
 SELECT * FROM employee;

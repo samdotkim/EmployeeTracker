@@ -15,7 +15,7 @@ The database organizes the stored MySQL data by employee, department, and other 
 6. Update employee managers
 
 
-![Demo of Employee Tracker application]
+![Demo](demo.gif)
 
 
 ## Installation
@@ -31,7 +31,7 @@ The database organizes the stored MySQL data by employee, department, and other 
 
 ## Database Schema
 
-![Database Schema](assets/schema.png)
+![DB Schema](schema.png)
 
 * **department**:
 

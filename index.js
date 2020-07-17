@@ -26,7 +26,7 @@ function start() {
         .prompt({
             name: "action",
             type: "list",
-            message: "What would you like to do?",
+            message: "Welcome to the sam.kim Employee Tracker.",
             choices: [
                 "View All Employees",
                 "View All Employees by Department",
